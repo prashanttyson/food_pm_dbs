@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_food/utils/colors.dart';
 import 'package:flutter_food/utils/dimensions.dart';
+import 'package:flutter_food/widget/app_column.dart';
 import 'package:flutter_food/widget/big_text.dart';
 import 'package:flutter_food/widget/icon_and_text.dart';
 import 'package:flutter_food/widget/small_text.dart';
@@ -202,37 +203,7 @@ matrix = Matrix4.diagonal3Values(1, currScale, 1)..setTranslationRaw(0, currTran
               ),
               child: Container(
                 padding: EdgeInsets.only(top:Dimensions.height15,left: Dimensions.width15,right: Dimensions.width15),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    BigText(text: "Street Food"),
-                    SizedBox(height: Dimensions.height10,),
-                    Row(children: [
-                      Wrap(
-                        children: List.generate(5, (index) => Icon(Icons.star,color: AppColors.mainColor,)
-                        ),
-                      ),
-                      SizedBox(width: Dimensions.width10,),
-                      SmallText(text: "4.5"),
-                      SizedBox(width: Dimensions.width10,),
-                      SmallText(text: "1287"),
-                      SizedBox(width: Dimensions.width10,),
-                      SmallText(text: "Comments"),
-                    ],),
-                    SizedBox(height: Dimensions.height20,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-      IconAndTextWidget(icon: Icons.circle_sharp, text: 'Normal', iconColor: AppColors.iconColor1),
-       IconAndTextWidget(icon: Icons.location_on, text: '4km', iconColor: AppColors.mainColor),
-      IconAndTextWidget(icon: Icons.access_time_rounded, text: '55min', iconColor: AppColors.iconColor2)
-    
-    
-    ],
-                    ),
-                  ],
-                ),
-              ),
+                child: AppColumn(text: 'Street Food',)),
                 ),
           ),
          

@@ -1,11 +1,15 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_food/home/food_page_body.dart';
+import 'package:flutter_food/pages/home/food_page_body.dart';
+
 import 'package:flutter_food/utils/colors.dart';
 import 'package:flutter_food/utils/dimensions.dart';
 import 'package:flutter_food/widget/big_text.dart';
+import 'package:flutter_food/widget/small_text.dart';
 
-import '../widget/small_text.dart';
+
+
+
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({ Key? key }) : super(key: key);
@@ -47,7 +51,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 ),        
                child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Icon(Icons.search,size: Dimensions.iconSize,),
+                  child: Icon(Icons.search,size: Dimensions.iconSize24,),
                 ),
               )
                 ],
